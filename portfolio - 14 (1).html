@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skaraletka — Портфолио</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--cyan:#00e5ff;--dark:#0b0914;--blue:#0d3875;--resume:#2b6cb0}*{margin:0;padding:0;box-sizing:border-box;cursor:none}html{scroll-behavior:smooth}body{font-family:Montserrat,sans-serif;background:#000;color:#fff;line-height:1.5;overflow-x:hidden}.custom-cursor{position:fixed;z-index:99999;width:22px;height:22px;border-radius:50%;background:#fff;pointer-events:none;mix-blend-mode:difference}.top-ticker{text-align:center;background:#0d0d13;padding:18px 10px;font-size:clamp(14px,.8vw,30px);letter-spacing:.14vw;font-weight:800;text-transform:uppercase}.main-nav{display:flex;justify-content:center;gap:5vw;padding:20px;background:#08080f;position:sticky;top:0;z-index:100}.main-nav a{color:#fff;text-decoration:none;font-size:clamp(18px,1.15vw,44px);font-weight:900;text-transform:uppercase}.main-nav a:hover{color:var(--cyan)}.hero-section{width:100%;aspect-ratio:3840/1476;position:relative;overflow:hidden}.cover-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.greeting-section{background:var(--dark);padding:5vw 8.7vw}.greeting-container{display:grid;grid-template-columns:25vw 1fr;gap:4vw;align-items:start}.profile-photo-container{width:25vw;aspect-ratio:1;border:3px solid #3b3b4f;overflow:hidden}.profile-photo-container img{width:100%;height:100%;object-fit:cover}.profile-details{margin-top:1vw;font-size:clamp(14px,.55vw,22px)}.name{font-weight:900}.username{font-weight:700;color:var(--cyan)}.info-column{padding-top:1.8vw;max-width:42vw}.info-column h2{color:var(--cyan);font-size:clamp(48px,3.5vw,140px);line-height:1;margin-bottom:1.7vw}.info-column p{font-size:clamp(22px,1.35vw,52px);line-height:1.65;margin-bottom:3vw}.btn,.download-btn{display:inline-block;background:var(--cyan);color:#000;padding:.9vw 1.35vw;border-radius:.45vw;text-decoration:none;text-transform:uppercase;font-size:clamp(11px,.4vw,16px);font-weight:900}
+.programs-section{background:linear-gradient(180deg,#0d3875,#03142e);padding:5vw 9.5vw;text-align:center}.section-title{font-size:clamp(30px,3.5vw,135px);font-weight:900;text-transform:uppercase;margin-bottom:3vw}.programs-grid{display:flex;justify-content:center;gap:1.5vw;flex-wrap:wrap}.program-card{background:#08080f;border:2px solid #ffffff1a;border-radius:1vw;padding:1.5vw;width:12vw;min-width:130px}.program-icon-placeholder{width:5vw;height:5vw;min-width:55px;min-height:55px;margin:auto auto 1vw;background:#1a1a2e;border-radius:.8vw;overflow:hidden}.program-icon-placeholder img{width:100%;height:100%;object-fit:cover}.program-card span{font-size:clamp(11px,.45vw,17px);font-weight:700}
+/* Раздел навыков */
+.skills-section{background:radial-gradient(circle at center,#0e2e5c,#020814);padding:7vw 9.5vw;text-align:center}.skills-title{font-size:clamp(34px,4vw,155px);font-weight:900;text-transform:uppercase}.skills-subtitle{font-size:clamp(11px,.5vw,19px);color:#a4b3c6;margin:.7vw 0 3vw}.skills-content{width:78vw;margin:auto}.skill-block{margin:0 auto 5vw}.skill-block h3{font-size:clamp(22px,1.8vw,70px);font-weight:900;text-transform:uppercase;margin-bottom:1.5vw}.skill-grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2vw}.skill-grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2vw}.skill-grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2vw;max-width:50vw;margin:auto}.skill-card{background:#05070c;border:2px solid #ffffff33;border-radius:.6vw;overflow:hidden;min-width:0}.skill-card img,.skill-card video{display:block;width:100%;height:100%;object-fit:cover}.skill-card .media{aspect-ratio:1/1;background:#05070c}.skill-card.wide .media{aspect-ratio:16/9}.skill-card span{display:block;padding:.7vw;font-size:clamp(11px,.5vw,18px);font-weight:700}.obj-view{width:100%;height:100%;min-height:180px;background:#05070c}.skill-wide-image{width:100%;aspect-ratio:16/9;object-fit:cover;border:2px solid #ffffff33;border-radius:.6vw;display:block;margin-bottom:1.2vw}.realism-image{aspect-ratio:2500/1087}
+.content-section{background:#030712;padding:6vw 9.5vw}.content-inner{width:78vw;margin:auto}.content-title{color:var(--cyan);font-size:clamp(34px,3.5vw,135px);text-align:center;font-weight:900;margin-bottom:2vw}.video-box{width:78vw;aspect-ratio:16/9;border:2px solid #ffffff33;border-radius:1vw;overflow:hidden}.video-box video{width:100%;height:100%}
+.resume-section{background:#e9edf2;color:#1a1a1a;padding:70px 20px}.resume-paper{max-width:1000px;margin:auto;background:#fff;padding:35px;box-shadow:0 15px 45px #0008}.resume-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px}.download-btn{background:var(--resume);color:#fff}.resume-header{display:grid;grid-template-columns:120px 1fr;gap:25px;border-bottom:3px solid var(--resume);padding-bottom:20px}.resume-photo{width:120px;height:160px;object-fit:cover;border:2px solid var(--resume)}.resume-name{font-size:clamp(1.8rem,4vw,3rem);font-weight:900}.resume-role{color:var(--resume);font-weight:700}.resume-contact{font-size:.9rem;margin-top:12px}.resume-contact a,.resume-block a{color:var(--resume)}.resume-block{margin:25px 0}.resume-block h3{color:var(--resume);text-transform:uppercase;border-bottom:1px solid #b8c4d1;padding-bottom:6px;margin-bottom:12px}.resume-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.resume-grid article{background:#f1f5f9;padding:15px;border-left:3px solid var(--resume)}.contacts-highlight.flash{background:#fff3a3;box-shadow:0 0 0 8px var(--cyan),0 0 35px var(--cyan);padding:15px;border-radius:8px}
+@media(max-width:900px){*{cursor:auto}.custom-cursor{display:none}.top-ticker{font-size:11px;padding:15px 10px}.main-nav{gap:5vw;padding:14px 10px}.main-nav a{font-size:clamp(13px,3.5vw,18px);white-space:nowrap}.greeting-section{padding:40px 16px}.greeting-container{grid-template-columns:42% 1fr;gap:5%}.profile-photo-container{width:100%}.profile-details{font-size:clamp(10px,2.8vw,15px);margin-top:10px}.info-column{padding-top:12px;max-width:none}.info-column h2{font-size:clamp(30px,8vw,48px)}.info-column p{font-size:clamp(13px,3.5vw,20px);line-height:1.55}.programs-section,.skills-section,.content-section{padding:50px 16px}.skills-content,.content-inner,.video-box{width:100%}.skill-grid-3{grid-template-columns:repeat(3,1fr);gap:5px}.skill-grid-4{grid-template-columns:repeat(2,1fr);gap:8px}.skill-grid-2{max-width:none}.skill-card span{font-size:9px;padding:7px 3px}.obj-view{min-height:110px}.resume-section{padding:25px 10px}.resume-paper{padding:22px 14px}.resume-actions{flex-direction:column;gap:14px}.resume-actions .download-btn{text-align:center;padding:18px 8px}.resume-header{grid-template-columns:120px minmax(0,1fr);gap:14px}.resume-photo{width:120px;height:160px}.resume-name{font-size:clamp(1.45rem,7vw,2rem);overflow-wrap:anywhere}.resume-contact{font-size:.78rem}.resume-grid{grid-template-columns:1fr}}
+@media(max-width:420px){.greeting-container{grid-template-columns:42% 1fr}.skill-grid-3{gap:3px}.skill-card span{font-size:7px}.obj-view{min-height:90px}.resume-paper{padding:18px 10px}.resume-header{grid-template-columns:105px minmax(0,1fr)}.resume-photo{width:105px;height:140px}}
+</style>
+</head>
+<body>
+<div class="custom-cursor" id="cursor"></div>
+<div class="top-ticker">3D анимация &nbsp;•&nbsp; 3D моделирование &nbsp;•&nbsp; риги &nbsp;•&nbsp; промо-иллюстрации &nbsp;•&nbsp; текстурирование</div>
+<nav class="main-nav"><a href="#portfolio">Portfolio</a><a href="#showreel">Showreel</a><a href="#resume">Resume</a><a href="#contacts">Contacts</a></nav>
+<section class="hero-section"><img class="cover-img" src="Обложка.png" alt="Обложка"></section>
+<section class="greeting-section" id="portfolio"><div class="greeting-container"><div><div class="profile-photo-container"><img src="photo.png" alt="Демитерко Елена"></div><div class="profile-details"><div class="name">Демитерко Елена Тимофеевна</div><div class="username">SKARALETKA</div></div></div><div class="info-column"><h2>ПРИВЕТ!</h2><p>Я Елена — 3D Character/Prop Artist.<br>Создаю персонажей полного цикла: скульптинг, ретопология, риггинг и текстурирование по UV-развертке. Также работаю над объектами окружения в едином стиле проекта.</p><a class="btn" href="#resume">скачать краткое резюме</a></div></div></section>
+<section class="programs-section"><h2 class="section-title">ПРОГРАММЫ</h2><div class="programs-grid"><div class="program-card"><div class="program-icon-placeholder"><img src="maya.png" alt=""></div><span>Maya</span></div><div class="program-card"><div class="program-icon-placeholder"><img src="ps.png" alt=""></div><span>Photoshop</span></div><div class="program-card"><div class="program-icon-placeholder"><img src="blender.png" alt=""></div><span>Blender</span></div><div class="program-card"><div class="program-icon-placeholder"><img src="ae.png" alt=""></div><span>After Effects</span></div><div class="program-card"><div class="program-icon-placeholder"><img src="pt.png" alt=""></div><span>Substance</span></div></div></section>
+<section class="skills-section" id="skills"><h2 class="skills-title">✦ навыки ✦</h2><p class="skills-subtitle">полный цикл создания персонажей и объектов окружения</p><div class="skills-content">
+<div class="skill-block"><h3>Полный пайплайн создания персонажей</h3><div class="skill-grid-3"><div class="skill-card wide"><div class="media"><img src="pipeline-sculpt.png" alt="Скульптинг персонажа"></div><span>Скульптинг</span></div><div class="skill-card wide"><div class="media"><div class="obj-view" data-model="pipeline-animation.obj"></div></div><span>Ретопология и риггинг</span></div><div class="skill-card wide"><div class="media"><div class="obj-view" data-model="pipeline-texture.obj"></div></div><span>Текстурирование по UV</span></div></div></div>
+<div class="skill-block"><h3>Примеры готовых персонажей</h3><div class="skill-grid-4"><div class="skill-card"><div class="media"><div class="obj-view" data-model="character-01.obj"></div></div><span>Персонаж 1</span></div><div class="skill-card"><div class="media"><div class="obj-view" data-model="character-02.obj"></div></div><span>Персонаж 2</span></div><div class="skill-card"><div class="media"><div class="obj-view" data-model="character-03.obj"></div></div><span>Персонаж 3</span></div><div class="skill-card"><div class="media"><div class="obj-view" data-model="character-04.obj"></div></div><span>Персонаж 4</span></div></div></div>
+<div class="skill-block"><h3>Примеры готовых объектов окружения</h3><div class="skill-grid-4"><div class="skill-card"><div class="media"><div class="obj-view" data-model="стол.obj" data-mtl="стол.mtl"></div></div><span>Столешница</span></div><div class="skill-card"><div class="media"><div class="obj-view" data-model="prop-02.obj"></div></div><span>Объект 2</span></div><div class="skill-card"><div class="media"><div class="obj-view" data-model="prop-03.obj"></div></div><span>Объект 3</span></div><div class="skill-card"><div class="media"><div class="obj-view" data-model="prop-04.obj"></div></div><span>Объект 4</span></div></div></div>
+<div class="skill-block"><h3>От реализма до стилизации</h3><img class="skill-wide-image realism-image" src="от%20реализма%20до%20стилизации.png" alt="От реализма до стилизации"><div class="skill-grid-4"><div class="skill-card"><div class="media"><div class="obj-view" data-model="style-01.obj"></div></div><span>Стиль 1</span></div><div class="skill-card"><div class="media"><div class="obj-view" data-model="style-02.obj"></div></div><span>Стиль 2</span></div><div class="skill-card"><div class="media"><div class="obj-view" data-model="style-03.obj"></div></div><span>Стиль 3</span></div><div class="skill-card"><div class="media"><div class="obj-view" data-model="style-04.obj"></div></div><span>Стиль 4</span></div></div></div>
+<div class="skill-block"><h3>High-poly и Low-poly модели</h3><p class="skills-subtitle">в зависимости от задачи</p><div class="skill-grid-2"><div class="skill-card wide"><div class="media"><div class="obj-view" data-model="high-poly.obj"></div></div><span>High-poly</span></div><div class="skill-card wide"><div class="media"><div class="obj-view" data-model="low-poly.obj"></div></div><span>Low-poly</span></div></div></div>
+<div class="skill-block"><h3>Опыт работы со студиями и удалённо</h3><div class="skill-grid-2"><div class="skill-grid-2"><div class="skill-card"><div class="media"><img src="studio-01.png" alt="Работа со студией 1"></div></div><div class="skill-card"><div class="media"><img src="studio-02.png" alt="Работа со студией 2"></div></div></div><div class="skill-grid-2"><div class="skill-card"><div class="media"><img src="remote-01.png" alt="Удалённая работа 1"></div></div><div class="skill-card"><div class="media"><img src="remote-02.png" alt="Удалённая работа 2"></div></div></div></div></div>
+</div></section>
+<section class="content-section" id="showreel"><div class="content-inner"><h2 class="content-title">Showreel</h2><div class="video-box"><video controls><source src="showreel.mp4" type="video/mp4"></video></div></div></section>
+<section class="resume-section" id="resume"><div class="resume-paper"><div class="resume-actions"><a class="download-btn" href="resume.pdf" download="resume.pdf">Скачать PDF resume</a><a class="download-btn" href="resume.docx" download="resume.docx">Скачать Word resume</a><a class="download-btn" href="resume.png" download="resume.png">Скачать PNG resume</a></div><div class="resume-header"><img class="resume-photo" src="resume-photo.png" alt="Фото для резюме"><div><h1 class="resume-name">Демитерко Елена Тимофеевна</h1><div class="resume-role">3D Artist / Modeler / Rigger</div><div class="resume-contact">Город: Москва<br>Телефон: <a href="tel:+79654310878">+7 (965) 431-08-78</a><br>Email: <a href="mailto:skaraletka2009@gmail.com">skaraletka2009@gmail.com</a> | Telegram: <a href="https://t.me/skaraletcka" target="_blank" rel="noopener noreferrer">@skaraletcka</a></div></div></div><div class="resume-block"><h3>О себе / Summary</h3><p>3D-художник с опытом работы над полным циклом создания 3D-ассетов: от скульптинга и ретопологии до риггинга и текстурирования. Учусь на 2 курсе по направлению «Анимация», активно применяю навыки в реальных проектах. Ищу стажировку в анимационной студии, чтобы развиваться в команде профессионалов, применять полученные знания на практике и создавать качественный контент для масштабных проектов.</p></div><div class="resume-block"><h3>Ключевые навыки / Technical Skills</h3><div class="resume-grid"><article><b>Моделирование</b><p>High-poly / Low-poly<br>Ретопология<br>UV-развёртка<br>PBR-текстурирование</p></article><article><b>Риггинг и скиннинг</b><p>Biped / Quadruped / Prop<br>IK/FK<br>Скиннинг<br>Деформаторы</p></article><article><b>Анимация</b><p>Keyframe-анимация<br>Blendshapes<br>Анимация техники<br>MoCap</p></article></div></div><div class="resume-block"><h3>Инструменты и ПО / Software &amp; Tools</h3><p><b>3D-пакеты:</b> Maya, Blender, ZBrush<br><b>Текстурирование:</b> Substance 3D Painter, Photoshop<br><b>Игровые движки:</b> Unreal Engine, Unity</p></div><div class="resume-block"><h3>Опыт работы / Work Experience</h3><p><b>Театр кукол им. С.В. Образцова — 3D-художник (Modeler / Rigger)</b><br>Период: Октябрь 2026 — Настоящее время</p><p>Создание 3D-моделей для публикации в интернете с целью популяризации театра. Выполняю полный пайплайн работы с ассетом: скульптинг, ретопология, UV-развёртка, PBR-текстурирование, а также создание рига для последующей анимации. Работаю над визуальным контентом, который представляет театр в цифровой среде.</p></div><div class="resume-block"><h3>Образование и курсы / Education &amp; Courses</h3><p>Московский колледж предпринимательства №11 — «Анимация и анимационное кино», 2 курс<br>Период: 2024 — Настоящее время</p></div><div class="resume-block" id="contacts"><h3>Контакты / Contacts</h3><p>Email: <a href="mailto:skaraletka2009@gmail.com">skaraletka2009@gmail.com</a><br>Telegram: <a href="https://t.me/skaraletcka" target="_blank" rel="noopener noreferrer">@skaraletcka</a><br>Город: Москва<br>Телефон: <a href="tel:+79654310878">+7 (965) 431-08-78</a></p></div></div></section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/MTLLoader.js"></script>
+<script>
+const cursor=document.getElementById('cursor');let mx=innerWidth/2,my=innerHeight/2,cx=mx,cy=my,lx=mx,ly=my;addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});(function a(){cx+=(mx-cx)*.2;cy+=(my-cy)*.2;let x=mx-lx,y=my-ly,s=Math.hypot(x,y);lx=mx;ly=my;cursor.style.transform=`translate(${cx}px,${cy}px) rotate(${Math.atan2(y,x)*57.3}deg) scale(${1+Math.min(s*.08,1.5)},${Math.max(1-s*.03,.6)})`;requestAnimationFrame(a)})();
+
+document.querySelectorAll('.model-viewport,.obj-view').forEach(container=>{
+  const scene=new THREE.Scene();
+  const width=container.clientWidth||300;
+  const height=container.clientHeight||200;
+  const camera=new THREE.PerspectiveCamera(45,width/height,.1,1000);
+  camera.position.z=5;
+  const renderer=new THREE.WebGLRenderer({alpha:true,antialias:true});
+  renderer.setSize(width,height);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+  container.appendChild(renderer.domElement);
+  scene.add(new THREE.AmbientLight(0xffffff,1.2));
+  const light=new THREE.DirectionalLight(0xffffff,1.5);
+  light.position.set(5,5,5);
+  scene.add(light);
+  let mesh;
+
+  function addModel(object){
+    object.traverse(item=>{
+      if(item.isMesh){
+        if(!item.material)item.material=new THREE.MeshStandardMaterial({color:0x00e5ff,roughness:.4,metalness:.2});
+        if(Array.isArray(item.material))item.material.forEach(material=>{material.side=THREE.DoubleSide});
+        else item.material.side=THREE.DoubleSide;
+      }
+    });
+    const box=new THREE.Box3().setFromObject(object);
+    const size=box.getSize(new THREE.Vector3());
+    const maxSize=Math.max(size.x,size.y,size.z)||1;
+    object.scale.setScalar(2.4/maxSize);
+    const centeredBox=new THREE.Box3().setFromObject(object);
+    object.position.sub(centeredBox.getCenter(new THREE.Vector3()));
+    mesh=object;
+    scene.add(mesh);
+  }
+
+  function loadObj(){
+    const loader=new THREE.OBJLoader();
+    loader.load(container.dataset.model,addModel,undefined,()=>{
+      mesh=new THREE.Mesh(new THREE.BoxGeometry(1.5,1.5,1.5),new THREE.MeshStandardMaterial({color:0x00e5ff,wireframe:true}));
+      scene.add(mesh);
+    });
+  }
+
+  if(container.dataset.model){
+    const objPath=container.dataset.model;
+    const mtlPath=container.dataset.mtl||objPath.replace(/\.obj$/i,'.mtl');
+    const slashIndex=mtlPath.lastIndexOf('/');
+    const folder=slashIndex>=0?mtlPath.slice(0,slashIndex+1):'';
+    const file=slashIndex>=0?mtlPath.slice(slashIndex+1):mtlPath;
+    const mtlLoader=new THREE.MTLLoader();
+    mtlLoader.setPath(folder);
+    mtlLoader.setResourcePath(folder);
+    mtlLoader.load(file,materials=>{
+      materials.preload();
+      const objLoader=new THREE.OBJLoader();
+      objLoader.setMaterials(materials);
+      objLoader.load(objPath,addModel,undefined,loadObj);
+    },undefined,loadObj);
+  }
+
+  (function render(){requestAnimationFrame(render);if(mesh)mesh.rotation.y+=.01;renderer.render(scene,camera)})();
+});
+</script>
+</body>
+</html>
